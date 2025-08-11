@@ -1,0 +1,26 @@
+---
+import FooterLink from "@components/FooterLink.astro"
+import SocialLinks from "@components/SocialLinks.astro"
+const today = new Date();
+---
+
+<footer>
+	<section id="links">
+		<SocialLinks />
+		{["Colophon","Corrigenda","Errata","Terms","Privacy"].map((link)=><FooterLink>{link}</FooterLink>)}	
+	</section>
+	<section id="copymark">
+		<p>Economisting.com is a trademark of Metagrapher, Inc.
+		<br/>&copy; {today.getFullYear()} Metagrapher, Inc. All rights reserved.
+	</section>
+</footer>
+<style>
+	footer {
+		padding: 2em 1em 6em 1em;
+		background: var(--foot-background);
+		background-size: cover;
+		background-blend-mode: var(--background-blend);
+		color: rgb(var(--gray));
+		text-align: center;
+	}
+</style>

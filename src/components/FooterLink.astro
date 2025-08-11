@@ -1,0 +1,8 @@
+---
+import InLink from "@components/InternalLink.astro"
+const Link = await Astro.slots.render("default")
+---
+<li><InLink href={Link.toLowerCase()}>{Link}</InLink><br>
+<style> 
+    li { list-style: none; font-size: larger; font-weight: 900; } 
+</style>

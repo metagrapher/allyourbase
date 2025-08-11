@@ -1,0 +1,17 @@
+---
+interface Props {
+    href?: string;
+    content?: string;
+}
+const { content=(await Astro.slots.render("default")) } = Astro.props
+const href = Astro.props.href ?? content.toLowerCase()
+const url = `/${href}`
+---
+<a href={url}>{content}</a>
+<style>
+    a {
+        color: var(--body-color);
+    }
+    a:hover {
+        color: var(--accent);
+    }
