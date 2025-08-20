@@ -12,7 +12,7 @@
     "@astrojs/cloudflare": "^12.6.3",
     "@astrojs/mdx": "^4.3.3",
     "@astrojs/sitemap": "^3.4.2",
-    "astro": "^5.12.8"
+    "astro": "^5.13.2"
   },
   "devDependencies": {
     "unocss": "^66.4.2"
