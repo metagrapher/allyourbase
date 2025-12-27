@@ -1,20 +1,23 @@
 {
-  "name": "out-out",
+  "name": "allyourbase",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro preview --host --port 4321",
+    "cf:dev": "wrangler dev --local",
+    "cf:deploy": "wrangler deploy"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.3",
-    "@astrojs/mdx": "^4.3.3",
-    "@astrojs/sitemap": "^3.4.2",
-    "astro": "^5.12.8"
+    "@astrojs/cloudflare": "^12.6.12",
+    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/sitemap": "^3.6.0",
+    "astro": "^5.16.6"
   },
   "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "eslint": "^8.57.1",
     "unocss": "^66.4.2"
   }
 }

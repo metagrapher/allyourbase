@@ -1,28 +1,29 @@
 ---
-import Head from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Head from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 interface Props {
-    "title"?: string;
-    "description"?: string;
+	title?: string;
+	description?: string;
 }
 
-const { title=SITE_TITLE, description=SITE_DESCRIPTION } = Astro.props;
+const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
-        <slot name="headFirst" />
+		<slot name="headFirst" />
 		<Head title={title} description={description} />
-        <slot name="headLast" />
+		<slot name="headLast" />
 	</head>
 
 	<body>
+		<slot name="bodyFirst" />
 		<Header />
-		<main><slot>
-        </slot></main>
+		<main><slot /></main>
 		<Footer />
+		<slot name="bodyLast" />
 	</body>
 </html>
